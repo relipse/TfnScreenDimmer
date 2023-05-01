@@ -1,0 +1,52 @@
+object Form1: TForm1
+  Left = 2402
+  Height = 240
+  Top = 172
+  Width = 320
+  Caption = 'Form1'
+  Color = clBlack
+  PopupMenu = mnuPopup
+  LCLVersion = '2.2.6.0'
+  object mnuPopup: TPopupMenu
+    Left = 120
+    Top = 64
+    object mniFullScreen: TMenuItem
+      Caption = 'Full Screen'
+      ShowAlwaysCheckable = True
+      OnClick = mniFullScreenClick
+    end
+    object mniTransparency: TMenuItem
+      Caption = 'Transparency'
+      object mni0: TMenuItem
+        AutoCheck = True
+        Caption = '0%'
+        Checked = True
+        RadioItem = True
+        OnClick = mni0Click
+      end
+      object mni25: TMenuItem
+        AutoCheck = True
+        Caption = '25%'
+        RadioItem = True
+        OnClick = mni25Click
+      end
+      object mni50: TMenuItem
+        AutoCheck = True
+        Caption = '50%'
+        RadioItem = True
+        OnClick = mni50Click
+      end
+      object mni75: TMenuItem
+        AutoCheck = True
+        Caption = '75%'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = mni75Click
+      end
+    end
+    object mniExit: TMenuItem
+      Caption = 'Exit'
+      OnClick = mniExitClick
+    end
+  end
+end
